@@ -23,10 +23,11 @@ describe 'Currency converter' do
         expect(currency.convert(1.0 , :EUR , :BRL)).to eq(6.67)
         expect(currency.convert(1.0 , :USD , :ARS)).to eq(80.71)
         expect(currency.convert(1.0 , :BTC , :ARS)).to eq(863642.86)
-        expect(currency.convert(1.0 , :ARS , :EUR)).to eq()
-        expect(currency.convert(1.0 , :EUR , :BTC)).to eq()
-        expect(currency.convert(1.0 , :BRL , :BTC)).to eq()
-        expect(currency.convert(1.0 , :BTC , :BRL)).to eq()
+        expect(currency.convert(1.0 , :BRL , :EUR)).to eq(0.15)
+        expect(currency.convert(1.0 , :ARS , :EUR)).to eq(0.1)
+        expect(currency.convert(1.0 , :EUR , :BTC)).to eq(0.0)
+        expect(currency.convert(1.0 , :BRL , :BTC)).to eq(0.0)
+        expect(currency.convert(1.0 , :BTC , :BRL)).to eq(60455.0)
 
     end
 end
